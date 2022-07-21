@@ -5,7 +5,7 @@ const config = {
   port: 3300,
   database: 'coronaboard',
   user: 'coronaboard_admin',
-  password: process.env.CORONABOARD_MYSQL_PASSWORD || 'se',
+  password: process.env.CORONABOARD_MYSQL_PASSWORD || 'sedf',
 };
 
 const sequelize = new Sequelize(config.database, config.user, config.password, {
