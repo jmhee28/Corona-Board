@@ -1,3 +1,4 @@
 tools/credentials.json
 tools/accessToken.json
 coronaboard-api/database/index.js
+crawler/node_modules/puppeteer/.local-chromium/win64-869685/chrome-win/chrome.dll
