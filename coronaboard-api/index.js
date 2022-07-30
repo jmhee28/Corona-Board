@@ -2,7 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const { sequelize } = require('./database');
 
- 
+const globalStatController = require('./controller/global-stat.controller');
+const keyValueController = require('./controller/key-value.controller');
 
 // Content-Type이 application/json인 HTTP 요청의 바디를 파싱할 수 있도록 설정
 async function launchServer() {
@@ -17,6 +18,14 @@ async function launchServer() {
         //res 객체는 클라이언트에 돌려줄 HTTP 응답을 만들 때 사용합니다.
       res.json({ message: 'Hello CoronaBoard!' });
     });
+
+    app.get('/global-stats', globalStatController.getAll);
+    app.post('/global-stats', globalStatController.insertOrUpdate);
+    app.delete('/global-stats', globalStatController.remove);
+
+    app.get('/key-value/:key', keyValueController.get);
+    app.get('/key-value/', keyValueController.insertOrUpdate);
+    app.get('/key-value/:key', keyValueController.remove);
 
     try {
         //sequelize에 정의된 객체 모델을 기준으로 실제 데 이터베이스와 동기화를 수행해 테이블 스키마를 생성 또는 변경하는 역할

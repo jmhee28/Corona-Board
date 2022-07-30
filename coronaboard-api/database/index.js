@@ -6,7 +6,7 @@ const config = {
   port: 3306,
   database: 'coronaboard',
   user: 'coronaboard_admin',
-  password: process.env.CORONABOARD_MYSQL_PASSWORD || '',
+  password: process.env.CORONABOARD_MYSQL_PASSWORD || 'adsf',
 };
 
 // 데이터베이스 연결 정보를 입력해 시퀄라이즈 인스턴스 생성
@@ -22,7 +22,7 @@ module.exports = {
   //global-stat.model.js 파일에서 익스포트한 화살표 함수를 호출
   //화살표 함수가 데이터베이스 연결까지 완료된 GlobalStat 객체 모델을 생성해 반환
   GlobalStat: require('./global-stat.model')(sequelize),
-
+  KeyValue: require('./key-value.model')(sequelize),
   // 또 다른 객체 모델이 필요하면 똑같은 방식으로 아래 줄에 추가
   //KeyValue: require('./key-value.model')(sequelize),
 };

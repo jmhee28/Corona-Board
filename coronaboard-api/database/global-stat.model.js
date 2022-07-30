@@ -1,3 +1,4 @@
+
 const { DataTypes } = require('sequelize'); // 시퀄라이즈 불러오기
 
 module.exports = (sequelize) => {// 화살표 함수를 외부로 익스포트
