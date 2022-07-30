@@ -2,3 +2,4 @@ tools/credentials.json
 tools/accessToken.json
 coronaboard-api/database/index.js
 crawler/node_modules/
+.git/objects/pack/pack-106b918a6b5ca994015d1848eaa93acc1e593d89.pack
