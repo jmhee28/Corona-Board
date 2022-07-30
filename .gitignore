@@ -1,1 +1,4 @@
-./coronaboard-api/database/index.js
+tools/credentials.json
+tools/accessToken.json
+coronaboard-api/database/index.js
+crawler/node_modules/puppeteer/
