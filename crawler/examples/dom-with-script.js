@@ -24,7 +24,7 @@ async function main(){
 
     // 4 스크립트 내에 하드코딩된 정보에 접근 
     // dataExample 변수를 이용하여 목표로 한 ‘크롤링할 내용’을 추출
-    console.log(context.dataExample.content);
+    console.log(context.dataExample.title);
 
 }
 
